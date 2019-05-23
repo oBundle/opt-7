@@ -2,3 +2,4 @@
 *.stencil
 assets/dist/theme-bundle.chunk.2.js
 assets/dist/
+node_modules/
