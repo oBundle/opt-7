@@ -73,9 +73,12 @@
             </span>
         </p>
 
-        {{#if brand.name}}
-            <p class="card-text" data-test-info-type="brandName">{{brand.name}}</p>
+        {{#if hide}}
+          {{#if brand.name}}
+              <p class="card-text" data-test-info-type="brandName">{{brand.name}}</p>
+          {{/if}}
         {{/if}}
+        
         <h4 class="card-title">
             {{#if demo}}
                 {{name}}

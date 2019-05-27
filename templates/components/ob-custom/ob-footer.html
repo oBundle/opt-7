@@ -35,6 +35,9 @@
             <article class="footer-info-col footer-info-col--small">
                 <h5 class="footer-info-heading">{{lang 'footer.navigate'}} <svg class="footer-arrow-down"><use xlink:href="#icon-arrow-down-mobile"></use></svg></h5>
                 <ul class="footer-info-list">
+                  <li>
+                      <a href="/giftcertificates.php">Gift Certificates</a>
+                  </li>
                   {{#each (limit pages 8)}}
                       <li>
                           <a href="{{url}}">{{name}}</a>
@@ -48,7 +51,7 @@
             <article class="footer-info-col newsletter" data-section-type="newsletterSubscription">
                 <div class="FooterNewsletter">
                   {{#if settings.show_newsletter_box}}
-                      {{> components/common/subscription-form footer}}
+                    {{> components/ob-custom/ob-home-subscription-form footer="footer"}}
                   {{/if}}
                 </div>
                 <div class="footer-info-col footer-info-col--social">

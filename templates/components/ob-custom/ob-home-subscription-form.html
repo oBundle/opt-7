@@ -1,19 +1,31 @@
-<h5 class="newsletter-heading">Subscribe & get <span>10% off</span> your first order</h5>
+{{#if footer '==' 'footer'}}
+<h5 class="footer-info-heading">{{lang 'newsletter.subscribe'}}</h5>
+<p><span>Get 10% off your first order </span>and find out about our latest deals & sales</p>
+{{else}}
 
-<form class="form" action="{{urls.subscribe.action}}" method="post">
-    <fieldset class="form-fieldset">
-        <input type="hidden" name="action" value="subscribe">
-        <input type="hidden" name="nl_first_name" value="bc">
-        <input type="hidden" name="check" value="1">
-        <div class="form-field">
-            <label class="form-label is-srOnly" for="nl_email">{{lang 'common.email_address'}}</label>
-            <div class="form-prefixPostfix wrap">
-                <input class="form-input" id="nl_email" name="nl_email" type="email" value="{{customer.email}}" placeholder="{{lang 'newsletter.email_placeholder'}}">
-                <input class="button button--primary form-prefixPostfix-button--postfix" type="submit" value="SUBSCRIBE">
+<div class="home-newsletter">
+  <div class="container">
+
+    <h5 class="newsletter-heading">Subscribe & get <span>10% off</span> your first order</h5>
+    {{/if}}
+    <form class="form" action="{{urls.subscribe.action}}" method="post">
+        <fieldset class="form-fieldset">
+            <input type="hidden" name="action" value="subscribe">
+            <input type="hidden" name="nl_first_name" value="bc">
+            <input type="hidden" name="check" value="1">
+            <div class="form-field">
+                <label class="form-label is-srOnly" for="nl_email">{{lang 'common.email_address'}}</label>
+                <div class="form-prefixPostfix wrap">
+                    <input class="form-input" id="nl_email" name="nl_email" type="email" value="{{customer.email}}" placeholder="{{#if footer '==' 'footer'}} {{lang 'newsletter.email_placeholder'}} {{else}} Enter your email address {{/if}}">
+                    <input class="button button--primary form-prefixPostfix-button--postfix" type="submit" value="{{#if footer '==' 'footer'}}SIGN UP {{else}} SUBSCRIBE{{/if}}">
+                </div>
+                {{#if settings.show_newsletter_summary }}
+                    <div class="footer-newsletter-summary">{{settings.newsletter_summary}}</div>
+                {{/if}}
             </div>
-            {{#if settings.show_newsletter_summary }}
-                <div class="footer-newsletter-summary">{{settings.newsletter_summary}}</div>
-            {{/if}}
-        </div>
-    </fieldset>
-</form>
+        </fieldset>
+    </form>
+{{#if footer '==' 'footer'}}{{else}}
+  </div>
+</div>
+{{/if}}

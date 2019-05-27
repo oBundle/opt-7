@@ -31,48 +31,11 @@ blog:
     {{/if}}
   </div>
 
-  <div class="home-video-section">
-    <div class="container">
-      <div class="app-image">
-        <img src="/product_images/uploaded_images/app-img.png" alt="">
-      </div>
-      <div class="app-content">
-        <h2 class="page-heading">NEW! AURA Pro with Bluetooth</h2>
-        <span class="sub-text">Now you can adjust your LEDs with a simple touch of a finger</span>
-      </div>
-      <div class="video-section-image">
-        <img src="/product_images/uploaded_images/video-section-bg.png" alt="">
-        <a href="javascript:void(0);" class="play-button">PLAY VIDEO</a>
-      </div>
-    </div>
-  </div>
+  {{> components/ob-custom/ob-video-section}}
 
-  <div class="we-are-opt7">
-    <div class="container">
-      <div class="we-are-opt-image">
-        <img src="/product_images/uploaded_images/we-are-opt-img.jpg" alt="">
-      </div>
-      <div class="we-are-opt-content">
-        <h2 class="page-heading">We are OPT7</h2>
-        <span class="sub-text">The #1 leader in automotive lighting & design</span>
-        <p>OPT7’s origins all started in a small garage in California. The year is 1998 and Super Street and Import Tuner ruled the street.</p>
-        <p>Back in 2006, our CEO and founder (Kevin) noticed that cars and trucks look stunning with aftermarket lights. The sad part was that for some reason the only lights around were either ridiculously expensive (think $1000s) or horribly made.</p>
-        <p>That’s when we decided we could do better.</p>
-        <a href="#" class="button learn-more">LEARN MORE</a>
-      </div>
-    </div>
-  </div>
+  {{> components/ob-custom/ob-we-are-opt7}}
 
-  <div class="home-two-banner">
-    <ul>
-      <li>
-        <img src="/product_images/uploaded_images/home-banner1.jpg" alt="">
-      </li>
-      <li>
-        <img src="/product_images/uploaded_images/home-banner2.jpg" alt="">
-      </li>
-    </ul>
-  </div>
+  {{> components/ob-custom/ob-home-two-banner}}
 
     <div class="container">
       {{#if products.top_sellers}}
@@ -88,33 +51,20 @@ blog:
       {{/if}}
     </div>
 
+    {{#if hide}}
     <div class="home-review-section">
       <div class="container">
         <h2 class="page-heading">The word on the street is...</h2>
         <span class="sub-text">Opt7 is great! Hear what our real customers have to say</span>
       </div>
     </div>
+    {{/if}}
 
-    <div class="home-newsletter">
-      <div class="container">
-        {{> components/ob-custom/ob-home-subscription-form}}
-      </div>
-    </div>
+    {{> components/ob-custom/ob-home-subscription-form}}
 
-    <div class="instagram-feed">
-      <div class="container">
-        <h2 class="page-heading">Share your OPT7 Experience</h2>
-        <span class="sub-text">Show off your upgrated vehicle</span>
-        <div class="insta-block clearfix">
-          <div id="instafeed" class="clearfix" data-id="6820527030" data-key="6820527030.1677ed0.bd9799ca34774074a975237a330d97ce">
-          </div>
-        </div>
-      </div>
-    </div>
+    {{> components/ob-custom/ob-instagram-feed}}
 
-    <div class="footer-hero-image">
-      <img src="{{cdn 'img/footer-hero-image.jpg'}}" alt="">
-    </div>
+    {{> components/ob-custom/ob-footer-hero-image}}
 
 </div>
 {{/partial}}

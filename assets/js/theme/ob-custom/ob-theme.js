@@ -1,5 +1,4 @@
 /*eslint-disable*/
-import $ from 'jquery';
 import instafeed from 'instafeed.js/instafeed.min';
 
 
@@ -12,29 +11,29 @@ export default function () {
   });
 
   /* ==== Search toggle in mobile ==== */
-    jQuery('.mobileView.search a').click(function () {
-      jQuery('.dropdown--quickSearch').slideToggle();
+    $('.mobileView.search a').click(function () {
+      $('.dropdown--quickSearch').slideToggle();
     });
 
     /* ==== User toggle in mobile ==== */
-      jQuery('.mobileView.user a').click(function () {
-        jQuery('.navPages-list--user.desktop').slideToggle();
+      $('.mobileView.user a').click(function () {
+        $('.navPages-list--user.desktop').slideToggle();
       });
 
       /* ==== Footer toggle in mobile ==== */
-    jQuery(".footer-info-col").each(function () {
-      jQuery(this).find("h5:first").click(function () {
-        if (jQuery(window).width() <= 767) {
-          jQuery(this).toggleClass("boxOpen").next("ul").slideToggle(300);
+    $(".footer-info-col").each(function () {
+      $(this).find("h5:first").click(function () {
+        if ($(window).width() <= 767) {
+          $(this).toggleClass("boxOpen").next("ul").slideToggle(300);
         }
       });
     });
 
     /* ==== sidebar toggle in mobile ==== */
-  jQuery(".page-sidebar").each(function () {
-    jQuery(this).find(".sidebarBlock .sidebarBlock-heading").click(function () {
-      if (jQuery(window).width() <= 767) {
-        jQuery(this).toggleClass("boxOpen").next("ul").slideToggle(300);
+  $(".page-sidebar").each(function () {
+    $(this).find(".sidebarBlock .sidebarBlock-heading").click(function () {
+      if ($(window).width() <= 767) {
+        $(this).toggleClass("boxOpen").next("ul").slideToggle(300);
       }
     });
   });
@@ -43,8 +42,8 @@ export default function () {
   if ($("#instafeed").length) {
     var userFeed = new instafeed({
       get: 'user',
-      userId: jQuery("#instafeed").attr("data-id"),
-      accessToken: jQuery("#instafeed").attr("data-key"),
+      userId: $("#instafeed").attr("data-id"),
+      accessToken: $("#instafeed").attr("data-key"),
       resolution: "low_resolution",
       limit: "20",
       template: '<div class="insta-item-wrap"><div class="insta-item"><a href="{{link}}" target="_blank"><img src="{{image}}" /></a></div></div>',
@@ -118,7 +117,7 @@ export default function () {
         });
       }
     });
-     if(jQuery("#instafeed").length && jQuery("#instafeed").attr("data-id")!="" && jQuery("#instafeed").attr("data-key")!=""){
+     if($("#instafeed").length && $("#instafeed").attr("data-id")!="" && $("#instafeed").attr("data-key")!=""){
         userFeed.run();
       }
   }

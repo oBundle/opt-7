@@ -1,5 +1,5 @@
 .footer {
-  background: url(../img/blue-texture.png) repeat 0 0 $color_secondary;
+  background: $color_secondary;
   border:none;
   padding: 110px 0 0;
   font-family: 'Source Sans Pro', sans-serif;
@@ -11,7 +11,7 @@
   }
   .footer-info {
     padding: 0 50px;
-    margin: 0 0 110px;
+    margin: 0 0 120px;
     display: flex;
     @media screen and (max-width: 1260px) {
       padding: 0;
@@ -81,7 +81,11 @@
 
         }
         &.boxOpen {
-
+          .footer-arrow-down {
+            @media screen and (max-width: 767px) {
+              transform: rotate(180deg);
+            }
+          }
         }
       }
       .footer-info-list {
@@ -154,12 +158,26 @@
                 color: #999999;
                 font-weight: 300;
                 font-family: 'Source Sans Pro', sans-serif;
+                border: 0px solid #f5f5f5;
                 @media screen and (max-width: 1260px) {
                   width: 75%;
+                }
+                @media screen and (max-width: 1023px) {
+                  width: 70%;
                 }
                 @media screen and (max-width: 479px) {
                   width: 100%;
                 }
+              }
+              ::-webkit-input-placeholder {color:#999999;opacity:1;font-size: 16px;}
+              ::-moz-placeholder {color: #999999;opacity:1;font-size: 16px; }
+              :-ms-input-placeholder {color:#999999;opacity:1;font-size: 16px; }
+              :-moz-placeholder {color:#999999;opacity:1;font-size: 16px; }
+              @media screen and (max-width: 767px) {
+                ::-webkit-input-placeholder { font-size: 14px; }
+                ::-moz-placeholder { font-size: 14px; }
+                :-ms-input-placeholder { font-size: 14px; }
+                :-moz-placeholder { font-size: 14px; }
               }
               .button {
                 background: $color_primary;
@@ -169,7 +187,7 @@
                 font-size: 14px;
                 font-weight: 400;
                 letter-spacing: 1px;
-                padding: 12px 45px;
+                padding: 12px 22px;
                 text-align: center;
                 font-family: 'Source Sans Pro', sans-serif;
                 text-transform: uppercase;
@@ -177,7 +195,10 @@
                   width: 25%;
                   margin-top: 0;
                   padding: 10px 10px;
-                  margin-left: 10px;
+                  margin-left: 0px;
+                }
+                @media screen and (max-width: 1023px) {
+                  width: 30%;
                 }
                 @media screen and (max-width: 479px) {
                   width: 100%;
@@ -301,21 +322,25 @@
     }
   }
   .socialLinks {
-    margin-top: 10px;
+    margin-top: 15px;
+    display: flex;
     .socialLinks-item {
       font-size: 15px;
       margin: 0 22px 0 0;
+      display: block;
       .icon {
-        width: auto;
-        height: auto;
+        width: inherit;
+        height: inherit;
         line-height: normal;
-        .fa {
-          font-size: 28px;
+        display: block;
+        .fab {
+          font-size: 23px;
           color: $color_white;
-          font-family: "FontAwesome";
+          // font-family: "Font Awesome 5 Free";
+          display: block;
         }
         &:hover {
-          .fa {
+          .fab {
             color: $color_primary;
           }
         }

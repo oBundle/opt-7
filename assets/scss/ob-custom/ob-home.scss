@@ -74,7 +74,7 @@
           font-size: 17px;
           font-weight: 700;
           letter-spacing: 0.25px;
-          padding: 16px 50px;
+          padding: 19px 50px;
           line-height: normal;
           text-transform: uppercase;
           margin-top: 30px;
@@ -99,26 +99,37 @@
     }
   }
   .slick-dots {
-    bottom:80px;
+    bottom:94px;
     line-height: normal;
-    @media screen and (max-width: 1279px) {
+    @media screen and (max-width: 1366px) {
+      bottom: 25px;
+    }
+    @media screen and (max-width: 1023px) {
       bottom: 15px;
     }
     @media screen and (max-width: 567px) {
-      display: none !important;
+      // display: none !important;
+      bottom: 10px;
     }
     li {
       background: none;
-      padding: 0 7px;
+      padding: 0 5px;
       height: auto;
       width: auto;
       line-height: normal;
+      @media screen and (max-width: 567px) {
+        padding: 0 3px;
+      }
       button {
         background: $color_white;
         border-radius: 100%;
         border:none;
         width: 14px;
         height: 14px;
+        @media screen and (max-width: 567px) {
+          width: 10px;
+          height: 10px;
+        }
       }
       &.slick-active, &:hover {
         background: none;
@@ -170,6 +181,9 @@
     // -webkit-mask-image: url(../icons/carousel-icon-right-arrow.svg);
     // mask-image: url(../icons/carousel-icon-right-arrow.svg);
   }
+}
+.heroCarousel-content {
+  background: none;
 }
 
 
@@ -279,7 +293,7 @@
       border-radius: 30px;
       border: 2px solid $color_white;
       background: none;
-      padding: 15px 40px;
+      padding: 13px 44px;
       font-size: 15px;
       color: $color_white;
       font-weight: 700;
@@ -316,7 +330,7 @@
 .we-are-opt7 {
   padding: 180px 0;
   @media screen and (max-width: 1279px) {
-    padding: 100px 0;
+    padding: 50px 0;
   }
   @media screen and (max-width: 767px) {
     padding: 20px 0;
@@ -330,7 +344,7 @@
   }
   .we-are-opt-image {
     width: 50%;
-    padding: 0 110px 0 35px;
+    padding: 0 100px 0 35px;
     @media screen and (max-width: 1279px) {
       padding: 0 50px 0 0px;
     }
@@ -340,7 +354,7 @@
     }
   }
   .we-are-opt-content {
-    padding-left: 110px;
+    padding-left: 100px;
     width: 50%;
     @media screen and (max-width: 1279px) {
       padding-left: 0;
@@ -355,6 +369,10 @@
       font-weight: 700;
       color: $color_secondary;
       letter-spacing: 0.25px;
+      margin-bottom: 5px;
+      @media screen and (max-width: 1279px) {
+        font-size: 34px;
+      }
       @media screen and (max-width: 767px) {
         font-size: 30px;
       }
@@ -364,10 +382,13 @@
       font-weight: 300;
       color: $color_secondary;
       letter-spacing: 0.25px;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
       display: block;
+      @media screen and (max-width: 1279px) {
+        font-size: 22px;
+      }
       @media screen and (max-width: 767px) {
-        font-size: 20px;
+        font-size: 18px;
         margin-top: 10px;
       }
     }
@@ -375,12 +396,16 @@
       font-size: 19px;
       font-weight: 300;
       letter-spacing: 0.25px;
+      line-height: 27px;
+      @media screen and (max-width: 1279px) {
+        font-size: 18px;
+      }
       @media screen and (max-width: 767px) {
         font-size: 17px;
       }
     }
     .learn-more {
-      margin-top: 20px;
+      margin-top: 25px;
       border-radius: 30px;
       border: 2px solid $color_primary;
       background: none;
@@ -433,16 +458,19 @@
 .home-product-section {
   padding: 180px 0 130px;
   &.featured {
-    padding: 90px 0;
-    @media screen and (max-width: 767px) {
+    padding: 82px 0;
+    @media screen and (max-width: 1279px) {
       padding: 30px 0;
     }
   }
   @media screen and (max-width: 1279px) {
-    padding: 50px 0 0;
+    padding: 30px 0 30px;
   }
   @media screen and (max-width: 767px) {
     padding: 30px 0 0;
+  }
+  .productGrid {
+    margin-bottom: 0;
   }
 }
 
@@ -582,7 +610,7 @@
 // =============================================================================
 .home-review-section {
   background: #f9f8f9;
-  padding: 160px 0 130px;
+  padding: 180px 0 140px;
   @media screen and (max-width: 1279px) {
     padding: 80px 0 80px;
   }
@@ -635,12 +663,15 @@
     line-height: normal;
     text-transform: none;
     width: 50%;
+    padding-right: 20px;
     @media screen and (max-width: 1300px) {
       width: 40%;
     }
     @media screen and (max-width: 1260px) {
       margin-bottom: 20px;
       width: 100%;
+      padding-right: 0;
+      text-align: center;
     }
     @media screen and (max-width: 1023px) {
       font-size: 28px;
@@ -687,16 +718,17 @@
           &:-moz-placeholder {color:#999999;opacity:1;font-size: 18px; font-weight: 300; }
           @media screen and (max-width: 1260px) {
             width: 75%;
+            padding: 18px 30px;
           }
           @media screen and (max-width: 1023px) {
-            padding: 15px 25px;
+            padding: 12px 25px;
           }
           @media screen and (max-width: 767px) {
             width: 70%;
           }
           @media screen and (max-width: 567px) {
             width: 100%;
-            padding: 13px 25px;
+            padding: 11px 25px;
             max-width: 100%;
           }
         }
@@ -714,6 +746,7 @@
           @media screen and (max-width: 1260px) {
             width: 25%;
             margin-top: 0;
+            padding: 10px 65px;
           }
           @media screen and (max-width: 1023px) {
             padding: 10px 35px;
@@ -799,6 +832,9 @@
         @media screen and (max-width: 1439px) {
           height: 260px;
         }
+        @media screen and (max-width: 1023px) {
+          height: 242px;
+        }
         @media screen and (max-width: 767px) {
           height: 200px;
         }
@@ -818,7 +854,10 @@
           -webkit-transition: all 0.4s ease 0s; transition: all 0.4s ease 0s;
         }
         &:before{
-          position: absolute; content: "\f16d"; font-family: FontAwesome; color: #ffffff; height: 40px; width: 40px; line-height: 50px;
+          position: absolute; content: "\f16d";
+          // font-family: FontAwesome;
+          font-family: "Font Awesome 5 Brands";
+          color: #ffffff; height: 40px; width: 40px; line-height: 50px;
           left: 50%; margin-left: -20px; top: 50%; margin-top: -25px; z-index: 5; font-size: 50px; opacity: 0;
           -webkit-transition: all 0.4s ease 0s; transition: all 0.4s ease 0s;
         }
@@ -849,7 +888,7 @@
     margin-top: 100px;
   }
   @media screen and (max-width: 1023px) {
-    margin-top: 60px;
+    margin-top: 30px;
   }
   @media screen and (max-width: 767px) {
     margin-top: 30px;

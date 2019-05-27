@@ -66,7 +66,7 @@
 
 .header {
   background: $color_secondary;
-  border-top: 1px solid #555;
+  border-top: 1px solid #333;
   @media screen and (max-width: 1023px) {
     top: 0;
     background: $color_secondary;
@@ -83,10 +83,12 @@
     @media screen and (max-width: 567px) {
       padding-top: 15px;
       padding-bottom: 15px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
   .header-logo {
-    margin:0px 20px 0px 0;
+    margin:0px 22px 0px 0;
     @media screen and (max-width: 1439px) {
       order: 1;
     }
@@ -114,6 +116,7 @@
         position: relative;
         @media screen and (max-width: 1023px) {
           max-height: inherit;
+          display: block;
         }
       }
       &:after {
@@ -192,6 +195,10 @@
               svg {
                 fill: $color_white;
                 stroke: $color_white;
+                @media screen and (max-width: 1023px) {
+                  fill: $color_secondary;
+                  stroke: $color_secondary;
+                }
               }
               @media screen and (min-width: 1024px) {
                 // display: none;
@@ -396,14 +403,21 @@
     @media screen and (max-width: 1439px) {
       order: 2;
     }
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width: 800px) {
+      transform: none;
+      right: 20px;
+      top: 50%;
+      margin-top: -10px;
+    }
+    @media screen and (max-width: 767px) {
       transform: none;
       right: 20px;
       top: auto;
+      margin-top: 0px;
     }
     @media screen and (max-width: 567px) {
       width: auto;
-      right: 15px;
+      right: 10px;
     }
     > .mobileView {
       &:hover {
@@ -417,7 +431,7 @@
       @media screen and (max-width: 1023px) {
         display: none;
         position: absolute;
-        top: 100%;
+        top: 65px;
         background: #fff;
         border: 1px solid #000;
         padding: 10px;
@@ -425,6 +439,12 @@
         right: auto;
         width: 120px;
         z-index: 12;
+      }
+      @media screen and (max-width: 767px) {
+        top: 58px !important;
+      }
+      @media screen and (max-width: 567px) {
+        top: 40px !important;
       }
       .navPages-item {
         font-size: 14px;
@@ -465,11 +485,14 @@
         position: absolute;
         right: 0 !important;
         left: auto !important;
-        top: 100%;
+        top: 65px;
         margin: 0px 0 0;
       }
+      @media screen and (max-width: 767px) {
+        top: 58px !important;
+      }
       @media screen and (max-width: 567px) {
-      //  width: 100%;
+        top: 40px !important;
       }
       .container {
         padding: 0;
@@ -525,7 +548,7 @@
     }
     .navUser-section {
       display: inline-block;
-      margin-left: 25px;
+      margin-left: 12px;
       position: static;
       @media screen and (max-width: 1279px) {
         margin-left: 15px;
@@ -556,7 +579,7 @@
             display: block;
             height: 18px;
             @media screen and (max-width: 550px) {
-              display: inline;
+              // display: inline;
             }
           }
           .countPill {
@@ -565,6 +588,9 @@
             right: -5px;
             top: -10px;
             font-size: 10px;
+            color: #333;
+            background-color: #ccc;
+            display: block;
           }
         }
         #cart-preview-dropdown {
@@ -574,6 +600,9 @@
           }
           .button {
             padding: 10px 20px;
+            @media screen and (max-width: 479px) {
+              padding: 10px 10px;
+            }
           }
         }
       }
@@ -582,6 +611,12 @@
 
 }
 
+.page_default {
+  .countPill {
+    background-color: #333333;
+    color: #fff;
+  }
+}
 
 
 
@@ -609,7 +644,21 @@
     max-width: 100%;
   }
   .modal-close {
-    top: 0; right: 15px;
+    top: 10px;
+    right: 10px;
+    background: #ccc;
+    border-radius: 100%;
+    @media screen and (max-width: 1279px) {
+      background: none;
+    }
+    span {
+      height: 100%;
+      line-height: normal;
+      height: 32px;
+      line-height: 29px;
+      display: block;
+      text-align: center;
+    }
     @media only screen and (max-width:1023px){
       display: block;
     }
@@ -833,9 +882,16 @@
 .navUser-item--cart {
   .dropdown-menu {
     &.is-open {
-      top: 100% !important;
+      top: 50px !important;
       @media screen and (max-width: 1023px) {
         width: 320px !important;
+        top: 65px !important;
+      }
+      @media screen and (max-width: 767px) {
+        top: 58px !important;
+      }
+      @media screen and (max-width: 567px) {
+        top: 40px !important;
       }
     }
   }
@@ -846,15 +902,44 @@
   @media screen and (max-width:1023px) {
     display: block;
     padding: 0 15px;
+    a {
+      display: block;
+      svg {
+        display: block;
+      }
+    }
   }
   @media screen and (max-width:567px) {
     padding: 0 7px;
   }
   a {
     svg {
-      width: 22px;
-      height: 21px;
+      width: 27px;
+      height: 25px;
       fill: white;
+      @media screen and (max-width:567px) {
+        width: 21px;
+        height: 22px;
+      }
     }
   }
+}
+
+.previewCartItem-image {
+  img {
+    max-width: 80%;
+  }
+}
+
+.previewCartAction {
+  .previewCartAction-checkout {
+    padding-left: 0;
+  }
+  .previewCartAction-viewCart {
+    padding-right: 0;
+  }
+}
+.previewCartItem-content {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }

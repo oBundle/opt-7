@@ -1,5 +1,5 @@
 {
-  "name": "obundle-opt7-v1.03",
+  "name": "obundle-opt7-v1.00",
   "version": "3.4.2",
   "meta": {
     "price": 0,
@@ -89,7 +89,7 @@
     "brand_size": "190x250",
     "gallery_size": "300x300",
     "productgallery_size": "300x300",
-    "product_size": "500x659",
+    "product_size": "600x600",
     "productview_thumb_size": "100x100",
     "productthumb_size": "100x100",
     "thumb_size": "100x100",

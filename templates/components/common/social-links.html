@@ -4,15 +4,21 @@
             <li class="socialLinks-item">
                 {{#if display_name '===' 'google+'}}
                     <a class="icon icon--google" href="{{url}}" target="_blank">
-                        <svg><use xlink:href="#icon-google" /></svg>
+                        <!-- <svg><use xlink:href="#icon-google" /></svg> -->
+                        <i class="fab fa-google-plus"></i>
                     </a>
                 {{else}}
                     <a class="icon icon--{{display_name}}" href="{{url}}" target="_blank">
                         <!-- <svg><use xlink:href="#icon-{{display_name}}" /></svg> -->
-                        <i class="fa fa-{{display_name}}"></i>
+                        <i class="fab fa-{{display_name}}"></i>
                     </a>
                 {{/if}}
             </li>
         {{/each}}
+        <li class="socialLinks-item">
+          <a class="icon icon--amazon" target="_blank" href="https://www.amazon.com/s?me=AI8A31CFKBZTU">
+            <i class="fab fa-amazon"></i>
+          </a>
+        </li>
     </ul>
 {{/if}}

@@ -14,12 +14,13 @@
   }
   .card {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding-left: 20px;
     padding-right: 20px;
     @media screen and (max-width: 767px) {
       padding-left: 0;
       padding-right: 0;
+      margin-bottom: 20px;
     }
     .card-figure {
       .card-img-container {
@@ -39,6 +40,9 @@
             font-size: 14px;
             letter-spacing: 1px;
             background: $color_primary;
+            @media screen and (max-width: 1279px) {
+              padding: 10px 15px;
+            }
             &:hover {
               background: $color_secondary;
             }

@@ -40,6 +40,9 @@ h1, h2, h3, h4, h5, h6 {
     border-color: $color_primary;
     color: $color_white;
   }
+  &:active {
+    border:none;
+  }
 }
 .button--primary {
   font-weight: bold;
@@ -60,6 +63,10 @@ p{
     line-height:30px;
     color:$color_secondary;
     font-weight:400;
+    @media screen and (max-width: 567px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
 }
 
 a{
@@ -143,7 +150,7 @@ body.hasAdminBar {
     font-size: 48px;
     font-weight: 700;
     color: $color_secondary;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     line-height: 48px;
     > span {
       position: relative;
